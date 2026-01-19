@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Input from '@components/Input.astro';
+import Heart from '@components/Heart.jsx';
+import Footer from '@components/Footer.astro';
+import '@styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Is It A Prime?">
+	<Header></Header>
+  <main class="flex flex-col justify-center items-center">
+    <p class="text-center max-w-2xl my-8">A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Identifying whether a number is prime is a fundamental in modern mathematics and computer science.</p>
+    <section class="flex gap-4 w-full max-w-xl px-4 mb-12 flex-col justify-center items-center">
+      <!-- <Input></Input> -->
+       <Heart client:load />
+    </section>
+  </main>
+  <Footer></Footer>
 </Layout>
+
+<script type="module" src="@libs/textArea.js"></script>
