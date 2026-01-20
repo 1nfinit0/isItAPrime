@@ -13,8 +13,5 @@ export default defineConfig({
 
   integrations: [react()],
 
-  outDir: 'docs',
-  
-  site: "https://1nfinit0.github.io",
-  base: "/isItAPrime/",
+  output: 'static', // Necesario para vercel hosting - . -
 });
