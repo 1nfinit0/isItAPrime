@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { autoResizeTextarea } from "@libs/textArea.js";
+import { autoResizeTextarea } from "@libs/textArea";
 
 export default function Heart() {
   const [show, setShow] = useState(false);
